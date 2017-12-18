@@ -1,5 +1,8 @@
 pipeline {
-    agent any
+    agent{
+        docker {image 'golang'}
+    } 
+
     stages {
         stage('No-op') {
             steps {
