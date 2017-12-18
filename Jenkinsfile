@@ -4,8 +4,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Begin'
-            }
-            steps {
                 echo 'yuzhipeng first use Jenkins to Building'
 
             }
@@ -19,9 +17,6 @@ pipeline {
             steps {
                 echo 'Now I am Deploying this project '
                 
-            }
-            steps{
-                echo 'Success'
             }
         }
     }
