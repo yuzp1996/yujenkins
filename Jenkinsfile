@@ -6,7 +6,7 @@ pipeline {
                 echo 'Begin'
             }
             steps {
-                echo 'yuzhipeng's  first use Jenkins to Building'
+                echo 'yuzhipeng first use Jenkins to Building'
 
             }
         }
