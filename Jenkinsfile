@@ -7,7 +7,7 @@ pipeline {
         stage('No-op') {
             steps {
                 sh 'ls'
-                sh 'go run go.test'
+                sh 'go run test.go'
             }
         }
     }
