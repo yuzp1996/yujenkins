@@ -17,7 +17,7 @@ pipeline {
             deleteDir() /* clean up our workspace */
         }
         success {
-            echo 'I succeeeded!'
+            echo 'I succeeeded! you are so good I like you '
         }
         unstable {
             echo 'I am unstable :/'
