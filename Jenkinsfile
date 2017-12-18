@@ -1,22 +1,11 @@
 pipeline {
-    agent any
+    agent { docker 'python:3.5.1' }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo 'Begin'
-                echo 'yuzhipeng first use Jenkins to Building'
-
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Now I am Testing this project'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Now I am Deploying this project '
-                
+                echo 'Start'
+                sh 'python --version'
+                echo 'End'
             }
         }
     }
