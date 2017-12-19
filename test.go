@@ -15,7 +15,7 @@ type NokiaPhone struct{
 
 //实现接口方法
 func (nokiaPhone NokiaPhone) call() {
-    fmt.Println(" I am NokiaPhone, I can call you now ")  
+    fmt.Println(" I am NokiaPhone, I can call you now github push  ")  
 }
 
 //调用
