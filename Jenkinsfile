@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'go run test.go'
+                wget "www.baidu.com"
             }
         }
     }
