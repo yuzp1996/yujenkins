@@ -1,13 +1,13 @@
 pipeline {
     agent{
-        docker {image 'golang'}
+        docker {image 'python'}
     } 
 
     stages {
         stage('No-op') {
             steps {
                 sh 'ls'
-                sh 'go run test.go'
+                sh 'python pythonfile.py'
                 sh 'wget "www.baidu.com"'
             }
         }
