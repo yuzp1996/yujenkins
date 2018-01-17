@@ -1,6 +1,6 @@
 pipeline {
     agent{
-        any
+       any
     } 
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
                 sh 'wget "www.baidu.com"'
             }
         }
-    } d
+    }
     post {
         always {
             echo 'One way or another, I have finished'
