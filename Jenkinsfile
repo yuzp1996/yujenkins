@@ -1,5 +1,7 @@
 pipeline {
-    agent{none} 
+    agent{
+        docker {image 'python'}
+    } 
 
     stages {
         stage('No-op') {
@@ -9,7 +11,7 @@ pipeline {
                 sh 'wget "www.baidu.com"'
             }
         }
-    }
+    } 
     post {
         always {
             echo 'One way or another, I have finished'
