@@ -17,7 +17,7 @@ pipeline{
             steps{
                 
                     script{
-                        input message: 'Do you 1 really want to deploy?'
+                        input message: 'Do you 2 really want to deploy?'
                     }
                
               
