@@ -1,11 +1,9 @@
 pipeline {
-    agent{
-    } 
+
     stages {
         stage('No-op') {
             steps {
                 sh 'ls'
-                sh 'echo "run test.go"'
                 sh 'wget "www.baidu.com"'
             }
         }
