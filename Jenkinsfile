@@ -2,7 +2,7 @@ pipeline {
     agent{
         docker {image 'golang'}
     } 
-    input("Could I ")
+    input "Could I "
     stages {
         stage('No-op') {
             steps {
