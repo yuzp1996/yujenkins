@@ -3,6 +3,7 @@ pipeline {
         docker {image 'golang'}
     }
     stages {
+        input("Could I")
         stage('No-op') {
             steps {
                 sh 'ls'
