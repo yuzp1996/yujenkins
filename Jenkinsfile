@@ -6,7 +6,7 @@ pipeline {
         
         stage('No-op') {
             steps {
-                input("Could I yew")
+                input("Could I yew1")
                 sh 'ls'
                 sh 'wget "www.baidu.com"'
             }
