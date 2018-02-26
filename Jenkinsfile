@@ -1,40 +1,45 @@
-pipeline {
-    agent{
-        docker {image 'golang'}
-    }
-    stages {
-        
-        stage('No-op') {
-            steps {
-                input("Could I yew12")
-                sh 'ls'
-                sh 'wget "www.baidu.com"'
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo 'Building12'
+               
             }
         }
-    }
-    post {
-        always {
-            echo 'One way or another, I have finished'
-            deleteDir() /* clean up our workspace */
+        stage('Test'){
+            steps{
+                echo 'Testing12'
+               
+            }
         }
-        success {
-            echo 'I succeeeded! you are so good I like you '
+        stage('Approve'){  
+            steps{
+                
+                    script{
+                        input message: 'Do you want to deploy?'
+                    }
+               
+              
+               
+            }
         }
-        unstable {
-            echo 'I am unstable :/'
+        stage('Deploy-Staging1'){
+            steps{
+         
+                echo 'Deploy-Staging1'
+                echo 'Deploy-Staging2'
+                
+                
+              
+            }
         }
-  
         
-        failure {
-                    echo 'I failed :('
-
-        mail to: 'zpyu@alauda.io',
-             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${env.BUILD_URL}"
-         }
-
-        changed {
-            echo 'Things were different before...'
+        stage('Deploy-Production'){
+            steps{
+                echo 'Deploy-Production'
+                
+            }
         }
     }
 }
