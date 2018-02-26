@@ -3,9 +3,10 @@ pipeline {
         docker {image 'golang'}
     }
     stages {
-        input("Could I")
+        
         stage('No-op') {
             steps {
+                input("Could I")
                 sh 'ls'
                 sh 'wget "www.baidu.com"'
             }
